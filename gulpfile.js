@@ -23,7 +23,7 @@ gulp.task("serve", function () {
 		server: "build/"
 	});
 
-	gulp.watch("source/sass/**/*.scss", ["style"]);
+	gulp.watch("source/scss/**/*.scss", ["style"]);
 	gulp.watch("source/*.html", ["html"]);
 	gulp.watch("source/js/*.js", ["script"]);
 });
@@ -56,7 +56,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task('style', function () {
-	gulp.src('source/sass/style.scss')
+	gulp.src('source/scss/style.scss')
 		.pipe(plumber())
 		.pipe(sassGlob())
 		.pipe(sass())
