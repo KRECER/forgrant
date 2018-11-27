@@ -40,6 +40,95 @@
 	font-size: 32px;
 }
 
+.crypto__name {
+	display: block;
+	margin-bottom: 20px;
+
+	font-size: 22px;
+	text-align: center;
+}
+
+.crypto__img {
+	margin-bottom: 20px;
+
+	text-align: center;
+}
+
+.crypto__img img {
+	width: 106px;
+	height: 120px;
+}
+
+.crypto__list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+
+	list-style: none;
+}
+
+.crypto__item {
+	width: calc(100% / 3 - 18px);
+	padding: 20px 30px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+
+	&--green {
+		background-image: url("../img/crypto/bg-green.jpg");
+	}
+}
+
+.crypto__table tbody {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.crypto__table tr {
+	display: flex;
+	width: 100%;
+}
+
+.crypto__table td {
+	width: 50%;
+}
+
+.crypto__table td:last-child {
+	text-align: right;
+}
+
+.crypto__table tr:nth-child(1),
+.crypto__table tr:nth-child(2) {
+	margin-bottom: 10px;
+}
+
+.crypto__field {
+	opacity: 0.4;
+	font-weight: bold;
+
+	&--price {
+		font-size: 20px;
+		opacity: 1;
+	}
+
+	&--percent {
+		opacity: 1;
+	}
+}
+
+.crypto__value {
+	font-size: 16px;
+	color: #15c536;
+	font-weight: bold;
+
+	&--price {
+		color: #ffffff;
+		font-size: 21px;
+	}
+}
+
 @media #{$tablet-width} {
 	.crypto__inner {
 		margin: 0 auto;

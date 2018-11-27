@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/style-min.css">
 </head>
+
 <body>
 	<div style="display: none">
 		<include src="build/img/sprite.svg"></include>
@@ -17,7 +19,9 @@
 			<div class="crypto__select">
 				<b class="crypto__title">Select currency to exhange:</b>
 				<form class="crypto__form" action="#">
-					<svg class="crypto__icon-arrow" width="10" height="15"><use xlink:href="#icon-arrow-down"></use></svg>
+					<svg class="crypto__icon-arrow" width="10" height="15">
+						<use xlink:href="#icon-arrow-down"></use>
+					</svg>
 					<select class="crypto__currency" name="currency" id="currency">
 						<option value="USD">USD</option>
 						<option value="EUR">EUR</option>
@@ -27,8 +31,101 @@
 				</form>
 			</div>
 			<ul class="crypto__list">
-				<li class="crypto__item">
+				<li class="crypto__item crypto__item--green">
 					<b class="crypto__name">Ethereum</b>
+					<div class="crypto__img">
+						<img src="img/crypto/Litecoin.png" width="120" height="120" alt="Litecoin">
+					</div>
+					<table class="crypto__table">
+						<tr>
+							<td class="crypto__field crypto__field--price">Price:</td>
+							<td class="crypto__value crypto__value--price">$22 526.92</td>
+						</tr>
+						<tr>
+							<td class="crypto__field crypto__field--percent">Percent change</td>
+							<td>TOGGLE</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Hour change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Day change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Week change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Month change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+					</table>
+				</li>
+				<li class="crypto__item crypto__item--green">
+					<b class="crypto__name">Ethereum</b>
+					<div class="crypto__img">
+						<img src="img/crypto/Litecoin.png" width="120" height="120" alt="Litecoin">
+					</div>
+					<table class="crypto__table">
+						<tr>
+							<td class="crypto__field crypto__field--price">Price:</td>
+							<td class="crypto__value crypto__value--price">$22 526.92</td>
+						</tr>
+						<tr>
+							<td class="crypto__field crypto__field--percent">Percent change</td>
+							<td>TOGGLE</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Hour change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Day change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Week change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Month change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+					</table>
+				</li>
+				<li class="crypto__item crypto__item--green">
+					<b class="crypto__name">Ethereum</b>
+					<div class="crypto__img">
+						<img src="img/crypto/Litecoin.png" width="120" height="120" alt="Litecoin">
+					</div>
+					<table class="crypto__table">
+						<tr>
+							<td class="crypto__field crypto__field--price">Price:</td>
+							<td class="crypto__value crypto__value--price">$22 526.92</td>
+						</tr>
+						<tr>
+							<td class="crypto__field crypto__field--percent">Percent change</td>
+							<td>TOGGLE</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Hour change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Day change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Week change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+						<tr>
+							<td class="crypto__field">Month change</td>
+							<td class="crypto__value">+266%</td>
+						</tr>
+					</table>
 				</li>
 			</ul>
 		</div>
@@ -36,4 +133,5 @@
 	<script src="js/jquery-min.js"></script>
 	<script src="js/main.js"></script>
 </body>
+
 </html>
