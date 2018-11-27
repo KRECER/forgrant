@@ -48,17 +48,6 @@
 	text-align: center;
 }
 
-.crypto__img {
-	margin-bottom: 20px;
-
-	text-align: center;
-}
-
-.crypto__img img {
-	width: 106px;
-	// height: 120px;
-}
-
 .crypto__list {
 	margin: 0;
 	padding: 0;
@@ -113,6 +102,46 @@
 .crypto__table tr:nth-child(1),
 .crypto__table tr:nth-child(2) {
 	margin-bottom: 10px;
+}
+
+.crypto__toggle {
+	position: relative;
+
+	width: 30px;
+	height: 15px;
+
+	border-radius: 7px;
+	background-color: #C7C6C7;
+	box-shadow: inset 1.362px 2.673px 7px 0px rgba(14, 31, 36, 0.56);
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	// transition: 0.5s;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: scale(1.4);
+
+		width: 24px;
+		height: 15px;
+
+		background-image: url("../img/crypto/toggle-wheel.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		transition: 0.5s;
+	}
+}
+
+.crypto__toggle:checked {
+	background-color: #00B7F4;
+
+	&::before {
+		left: 20px;
+	}
 }
 
 .crypto__field {

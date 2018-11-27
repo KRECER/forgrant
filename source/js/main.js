@@ -54,6 +54,10 @@ window.onload = function () {
 		});
 	}
 
+	printEthereum('USD');
+	printLitecoin('USD');
+	printBitcoin('USD');
+
 	currency.addEventListener('change', function() {
 		printEthereum(this.value);
 		printLitecoin(this.value);
