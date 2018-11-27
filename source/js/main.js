@@ -1,6 +1,7 @@
 window.onload = function () {
 	var currency = document.querySelector('.crypto__currency');
 	var currencyVal = document.querySelector('.crypto__currency').value;
+	var currencySymbol = '$';
 	var ethereum = document.querySelector('.crypto__item--ethereum');
 	var ethereumPrice = document.querySelector('.crypto__item--ethereum .crypto__value--price');
 	var ethereumHour = document.querySelector('.crypto__item--ethereum .crypto__value--hour');
@@ -23,26 +24,6 @@ window.onload = function () {
 	var bitcoinMonth = document.querySelector('.crypto__item--bitcoin .crypto__value--month');
 
 	var toggles = document.querySelectorAll('.crypto__toggle');
-
-	function printBitcoin(currency, percent) {
-		if (percent) {
-			$.get('https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC' + currency, function(data) {
-				bitcoinPrice.innerHTML = data['ask'];
-				bitcoinHour.innerHTML = data['changes'].percent.hour;
-				bitcoinDay.innerHTML = data['changes'].percent.day;
-				bitcoinWeek.innerHTML = data['changes'].percent.week;
-				bitcoinMonth.innerHTML = data['changes'].percent.month;
-			});
-		} else {
-			$.get('https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC' + currency, function(data) {
-				bitcoinPrice.innerHTML = data['ask'];
-				bitcoinHour.innerHTML = data['changes'].price.hour;
-				bitcoinDay.innerHTML = data['changes'].price.day;
-				bitcoinWeek.innerHTML = data['changes'].price.week;
-				bitcoinMonth.innerHTML = data['changes'].price.month;
-			});
-		}
-	}
 
 	for (var i = 0; i < toggles.length; i++) {
 		toggles[i].onclick = function() {
@@ -70,15 +51,15 @@ window.onload = function () {
 	function printEthereum(currency, percent) {
 		if (percent) {
 			$.get('https://apiv2.bitcoinaverage.com/indices/global/ticker/ETH' + currency, function(data) {
-				ethereumPrice.innerHTML = data['ask'];
-				ethereumHour.innerHTML = data['changes'].percent.hour;
-				ethereumDay.innerHTML = data['changes'].percent.day;
-				ethereumWeek.innerHTML = data['changes'].percent.week;
-				ethereumMonth.innerHTML = data['changes'].percent.month;
+				ethereumPrice.innerHTML = data['ask'] + currencySymbol;
+				ethereumHour.innerHTML = data['changes'].percent.hour + '%';
+				ethereumDay.innerHTML = data['changes'].percent.day + '%';
+				ethereumWeek.innerHTML = data['changes'].percent.week + '%';
+				ethereumMonth.innerHTML = data['changes'].percent.month + '%';
 			});
 		} else {
 			$.get('https://apiv2.bitcoinaverage.com/indices/global/ticker/ETH' + currency, function(data) {
-				ethereumPrice.innerHTML = data['ask'];
+				ethereumPrice.innerHTML = data['ask'] + currencySymbol;
 				ethereumHour.innerHTML = data['changes'].price.hour;
 				ethereumDay.innerHTML = data['changes'].price.day;
 				ethereumWeek.innerHTML = data['changes'].price.week;
@@ -90,15 +71,15 @@ window.onload = function () {
 	function printLitecoin(currency, percent) {
 		if (percent) {
 			$.get('https://apiv2.bitcoinaverage.com/indices/global/ticker/LTC' + currency, function(data) {
-				litecoinPrice.innerHTML = data['ask'];
-				litecoinHour.innerHTML = data['changes'].percent.hour;
-				litecoinDay.innerHTML = data['changes'].percent.day;
-				litecoinWeek.innerHTML = data['changes'].percent.week;
-				litecoinMonth.innerHTML = data['changes'].percent.month;
+				litecoinPrice.innerHTML = data['ask'] + currencySymbol;
+				litecoinHour.innerHTML = data['changes'].percent.hour + '%';
+				litecoinDay.innerHTML = data['changes'].percent.day + '%';
+				litecoinWeek.innerHTML = data['changes'].percent.week + '%';
+				litecoinMonth.innerHTML = data['changes'].percent.month + '%';
 			});
 		} else {
 			$.get('https://apiv2.bitcoinaverage.com/indices/global/ticker/LTC' + currency, function(data) {
-				litecoinPrice.innerHTML = data['ask'];
+				litecoinPrice.innerHTML = data['ask'] + currencySymbol;
 				litecoinHour.innerHTML = data['changes'].price.hour;
 				litecoinDay.innerHTML = data['changes'].price.day;
 				litecoinWeek.innerHTML = data['changes'].price.week;
@@ -107,13 +88,41 @@ window.onload = function () {
 		}
 	}
 
-
+	function printBitcoin(currency, percent) {
+		if (percent) {
+			$.get('https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC' + currency, function(data) {
+				bitcoinPrice.innerHTML = data['ask'] + currencySymbol;
+				bitcoinHour.innerHTML = data['changes'].percent.hour + '%';
+				bitcoinDay.innerHTML = data['changes'].percent.day + '%';
+				bitcoinWeek.innerHTML = data['changes'].percent.week + '%';
+				bitcoinMonth.innerHTML = data['changes'].percent.month + '%';
+			});
+		} else {
+			$.get('https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC' + currency, function(data) {
+				bitcoinPrice.innerHTML = data['ask'] + currencySymbol;
+				bitcoinHour.innerHTML = data['changes'].price.hour;
+				bitcoinDay.innerHTML = data['changes'].price.day;
+				bitcoinWeek.innerHTML = data['changes'].price.week;
+				bitcoinMonth.innerHTML = data['changes'].price.month;
+			});
+		}
+	}
 
 	printEthereum('USD');
 	printLitecoin('USD');
 	printBitcoin('USD');
 
 	currency.addEventListener('change', function() {
+		if (this.value == 'USD') {
+			currencySymbol = '$';
+		} else if (this.value == 'EUR') {
+			currencySymbol = '€';
+		} else if (this.value == 'RUB') {
+			currencySymbol = ' ₽';
+		} else {
+			currencySymbol = '£';
+		}
+
 		printEthereum(this.value);
 		printLitecoin(this.value);
 		printBitcoin(this.value);
