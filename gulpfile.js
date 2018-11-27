@@ -70,7 +70,6 @@ gulp.task('style', function () {
 
 gulp.task('script', function () {
 	return gulp.src('source/js/*.js')
-		.pipe(concat('main.js'))
 		.pipe(gulp.dest('build/js'))
 		.pipe(server.stream());
 });
