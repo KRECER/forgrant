@@ -31,6 +31,7 @@ window.onload = function () {
 
 	for (var i = 0; i < toggles.length; i++) {
 		toggles[i].onclick = function() {
+			searchNegative();
 			if (this.checked) {
 				if ( this.classList.contains('crypto__toggle--ethereum') ) {
 					printEthereum(currencyVal, true);
@@ -88,7 +89,6 @@ window.onload = function () {
 				litecoinDay.innerHTML = data['changes'].price.day + currencySymbol;
 				litecoinWeek.innerHTML = data['changes'].price.week + currencySymbol;
 				litecoinMonth.innerHTML = data['changes'].price.month + currencySymbol;
-				searchNegative();
 			});
 		}
 	}
@@ -138,5 +138,6 @@ window.onload = function () {
 		printEthereum(this.value);
 		printLitecoin(this.value);
 		printBitcoin(this.value);
+
 	});
 }
