@@ -78,6 +78,9 @@ gulp.task('style', function () {
 
 gulp.task('script', function () {
 	return gulp.src('source/js/*.js')
+	  .pipe(gulp.dest('build/js'))
+		.pipe(uglify())
+		.pipe(rename('main-min.js'))
 		.pipe(gulp.dest('build/js'))
 		.pipe(server.stream());
 });

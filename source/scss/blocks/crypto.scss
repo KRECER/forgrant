@@ -215,6 +215,10 @@
 		margin: 0;
 	}
 
+	.crypto__name {
+		margin-bottom: 125px;
+	}
+
   .crypto__list {
 		flex-direction: row;
 		justify-content: space-between;
@@ -258,6 +262,10 @@
 		width: 300px;
 		padding: 10px;
 		padding-left: 15px;
+	}
+
+	.crypto__name {
+		margin-bottom: 147px;
 	}
 	
 	.crypto__field {
