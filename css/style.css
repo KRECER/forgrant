@@ -543,6 +543,8 @@ img {
     width: 200px; }
   .crypto__title {
     margin: 0; }
+  .crypto__name {
+    margin-bottom: 125px; }
   .crypto__list {
     flex-direction: row;
     justify-content: space-between;
@@ -551,7 +553,11 @@ img {
     width: calc(100% / 3 - 18px);
     padding: 20px; }
   .crypto__field {
-    font-weight: 300; } }
+    font-weight: 300; }
+    .crypto__field--price {
+      font-size: 12px; }
+  .crypto__value {
+    font-size: 12px; } }
 
 @media (min-width: 1200px) {
   .crypto__inner {
@@ -566,13 +572,17 @@ img {
     width: 300px;
     padding: 10px;
     padding-left: 15px; }
+  .crypto__name {
+    margin-bottom: 147px; }
   .crypto__field {
     font-size: 14px;
     font-weight: 700; }
     .crypto__field--price {
       font-size: 22px; }
-  .crypto__value--price {
-    font-size: 22px; } }
+  .crypto__value {
+    font-size: 16px; }
+    .crypto__value--price {
+      font-size: 22px; } }
 
 .visually-hidden {
   position: absolute;

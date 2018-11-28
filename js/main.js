@@ -35,7 +35,6 @@ window.onload = function () {
 			if (this.checked) {
 				if ( this.classList.contains('crypto__toggle--ethereum') ) {
 					printEthereum(currencyVal, true);
-					console.log('11111');
 				} else if ( this.classList.contains('crypto__toggle--litecoin') ) {
 					printLitecoin(currencyVal, true);
 				} else {
@@ -135,9 +134,9 @@ window.onload = function () {
 			currencySymbol = ' £';
 		}
 
-		printEthereum(this.value);
-		printLitecoin(this.value);
-		printBitcoin(this.value);
+		printEthereum(this.value, percent);
+		printLitecoin(this.value, percent);
+		printBitcoin(this.value, percent);
 
 	});
 }
