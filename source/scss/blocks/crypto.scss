@@ -228,6 +228,14 @@
 
 	.crypto__field {
 		font-weight: 300;
+
+		&--price {
+			font-size: 12px;
+		}
+	}
+
+	.crypto__value {
+		font-size: 12px;
 	}
 }
 
@@ -262,6 +270,8 @@
 	}
 
 	.crypto__value {
+		font-size: 16px;
+
 		&--price {
 			font-size: 22px;
 		}
