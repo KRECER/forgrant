@@ -1,7 +1,7 @@
 window.onload = function () {
 	var currency = document.querySelector('.crypto__currency');
 	var currencyVal = document.querySelector('.crypto__currency').value;
-	var currencySymbol = '$';
+	var currencySymbol = ' $';
 	var ethereum = document.querySelector('.crypto__item--ethereum');
 	var ethereumPrice = document.querySelector('.crypto__item--ethereum .crypto__value--price');
 	var ethereumHour = document.querySelector('.crypto__item--ethereum .crypto__value--hour');
@@ -114,13 +114,13 @@ window.onload = function () {
 
 	currency.addEventListener('change', function() {
 		if (this.value == 'USD') {
-			currencySymbol = '$';
+			currencySymbol = ' $';
 		} else if (this.value == 'EUR') {
-			currencySymbol = '€';
+			currencySymbol = ' €';
 		} else if (this.value == 'RUB') {
 			currencySymbol = ' ₽';
 		} else {
-			currencySymbol = '£';
+			currencySymbol = ' £';
 		}
 
 		printEthereum(this.value);

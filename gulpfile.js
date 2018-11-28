@@ -20,7 +20,9 @@ var cheerio = require('gulp-cheerio');
 
 gulp.task("serve", function () {
 	server.init({
-		server: "build/"
+		server: {
+			baseDir: "build/"
+		}
 	});
 
 	gulp.watch("source/scss/**/*.scss", ["style"]);
