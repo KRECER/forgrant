@@ -15,9 +15,9 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 25px;
-	padding-right: 25px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+  padding-right: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-bottom: 50px;
 
   background-color: rgba(255, 255, 255, 0.1);
@@ -34,7 +34,7 @@
 
   background-color: #142027;
   border-radius: 5px;
-  border-color: #54E9FF;
+  border-color: #54e9ff;
   appearance: button;
   cursor: pointer;
   outline: none;
@@ -54,11 +54,11 @@
 }
 
 .crypto__title {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 
   font-weight: 300;
-	font-size: 16px;
-	text-transform: uppercase;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .crypto__name {
@@ -72,17 +72,17 @@
 .crypto__list {
   margin: 0;
   padding: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   list-style: none;
 }
 
 .crypto__item {
-	width: 280px;
-	padding: 20px 30px;
-	margin-bottom: 20px;
+  width: 280px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
 
 
   background-repeat: no-repeat;
@@ -134,7 +134,7 @@
   height: 15px;
 
   border-radius: 7px;
-  background-color: #C7C6C7;
+  background-color: #c7c6c7;
   box-shadow: inset 1.362px 2.673px 7px 0 rgba(14, 31, 36, 0.56);
   appearance: none;
   outline: none;
@@ -160,7 +160,7 @@
 }
 
 .crypto__toggle:checked {
-  background-color: #00B7F4;
+  background-color: #00b7f4;
 
   &::before {
     left: 20px;
@@ -189,99 +189,99 @@
   &--price {
     color: #ffffff;
     font-size: 16px;
-	}
-	
-	&--negative {
-		color: #ea061f;
-	}
+  }
+
+  &--negative {
+    color: #ea061f;
+  }
 }
 
 @media #{$tablet-width} {
   .crypto__inner {
     margin: 0 auto;
     width: 750px;
-	}
-	
-	.crypto__select {
-		flex-direction: row;
-		align-items: center;
-	}
+  }
 
-	.crypto__currency {
-		width: 200px;
-	}
+  .crypto__select {
+    flex-direction: row;
+    align-items: center;
+  }
 
-	.crypto__title {
-		margin: 0;
-	}
+  .crypto__currency {
+    width: 200px;
+  }
 
-	.crypto__name {
-		margin-bottom: 125px;
-	}
+  .crypto__title {
+    margin: 0;
+  }
+
+  .crypto__name {
+    margin-bottom: 125px;
+  }
 
   .crypto__list {
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: stretch;
-	}
-	
-	.crypto__item {
-		width: calc(100% / 3 - 18px);
-		padding: 20px;
-	}
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
 
-	.crypto__field {
-		font-weight: 300;
+  .crypto__item {
+    width: calc(100% / 3 - 18px);
+    padding: 20px;
+  }
 
-		&--price {
-			font-size: 12px;
-		}
-	}
+  .crypto__field {
+    font-weight: 300;
 
-	.crypto__value {
-		font-size: 12px;
-	}
+    &--price {
+      font-size: 12px;
+    }
+  }
+
+  .crypto__value {
+    font-size: 12px;
+  }
 }
 
 @media #{$desktop-width} {
   .crypto__inner {
     width: 984px;
-	}
+  }
 
-	.crypto__select {
-		padding-left: 135px;
-	}
+  .crypto__select {
+    padding-left: 135px;
+  }
 
-	.crypto__title {
-		font-size: 32px;
-		text-transform: inherit;
-		font-weight: 300;
-	}
+  .crypto__title {
+    font-size: 32px;
+    text-transform: inherit;
+    font-weight: 300;
+  }
 
-	.crypto__currency {
-		width: 300px;
-		padding: 10px;
-		padding-left: 15px;
-	}
+  .crypto__currency {
+    width: 300px;
+    padding: 10px;
+    padding-left: 15px;
+  }
 
-	.crypto__name {
-		margin-bottom: 147px;
-	}
-	
-	.crypto__field {
-		font-size: 14px;
-		font-weight: 700;
+  .crypto__name {
+    margin-bottom: 147px;
+  }
 
-		&--price {
-			font-size: 22px;
-		}
-	}
+  .crypto__field {
+    font-size: 14px;
+    font-weight: 700;
 
-	.crypto__value {
-		font-size: 16px;
+    &--price {
+      font-size: 22px;
+    }
+  }
 
-		&--price {
-			font-size: 22px;
-		}
-	}
+  .crypto__value {
+    font-size: 16px;
+
+    &--price {
+      font-size: 22px;
+    }
+  }
 }
