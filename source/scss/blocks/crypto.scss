@@ -189,7 +189,11 @@
   &--price {
     color: #ffffff;
     font-size: 16px;
-  }
+	}
+	
+	&--negative {
+		color: #ea061f;
+	}
 }
 
 @media #{$tablet-width} {
