@@ -120,9 +120,6 @@ window.onload = function () {
 				bitcoinDay.innerHTML = data['changes'].price.day + currencySymbol;
 				bitcoinWeek.innerHTML = data['changes'].price.week + currencySymbol;
 				bitcoinMonth.innerHTML = data['changes'].price.month + currencySymbol;
-				setTimeout(function() {
-					searchNegative();
-				}, 100);
 			});
 		}
 	}
